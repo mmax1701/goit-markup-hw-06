@@ -674,6 +674,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: auto;
+  margin-bottom: 24px;
 }
 
 .is-hidden {
@@ -682,6 +683,41 @@ body {
   pointer-events: none;
 }
 
-.modal-form {
-  display: flex;
+.modal-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--main-color-text);
+  margin-bottom: 16px;
+}
+
+.input-text {
+  display: block;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0em;
+  color: #8e8f99;
+  margin-bottom: 4px;
+}
+.modal-input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+
+  padding-left: 38px;
+}
+
+.input-wrap {
+  position: relative;
+  margin-bottom: 8px;
+}
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
 }
