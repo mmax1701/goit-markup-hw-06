@@ -707,8 +707,14 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
-
   padding-left: 38px;
+  padding-right: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus,
+.modal-input:hover {
+  border-color: var(--brand-color);
 }
 
 .input-wrap {
@@ -716,8 +722,100 @@ body {
   margin-bottom: 8px;
 }
 .modal-icon {
+  display: block;
   position: absolute;
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus,
+.modal-input:hover + .modal-icon {
+  fill: var(--brand-color);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+  outline: none;
+  margin-bottom: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus,
+.modal-textarea:hover {
+  color: black;
+  border-color: var(--brand-color);
+}
+
+.user-policy-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.user-policy-label::before {
+  display: block;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid var(--main-color-text);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+}
+
+.user-policy-checkbox:checked + .user-policy-label::before {
+  background-image: url(../images/checkbox.svg);
+  background-color: var(--pressed-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-color: transparent;
+}
+
+.user-policy-checkbox:focus,
+.user-policy-checkbox:hover + .user-policy-label::before {
+  border-color: var(--pressed-color);
+}
+
+.checkbox-text {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+
+.modal-btn {
+  min-width: 169px;
+  height: 56px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background: var(--brand-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--pressed-color);
+}
+
+.modal-btn-wrap {
+  text-align: center;
 }
